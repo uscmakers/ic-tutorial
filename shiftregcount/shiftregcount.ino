@@ -16,8 +16,11 @@ void loop() {
   //count up routine
   for (int j = 0; j < 256; j++) {
     //ground latchPin and hold low for as long as you are transmitting
-    
+    digitalWrite(latchPin, LOW);
+    shiftOut(dataPin, clockPin, MSBFIRST, j );
     //return the latch pin high to signal chip that it 
     //no longer needs to listen for information
+    digitalWrite(latchPin, HIGH);
+    delay(500);
   }
 } 

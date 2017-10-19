@@ -16,7 +16,6 @@ void shiftO(int dataP, int clk, int bOut)
     digitalWrite(clk, LOW);
   }
   Serial.print('\n');
-  
 }
 int latchPin =8;
 int clkPin = 12;
@@ -38,7 +37,6 @@ void loop() {
     digitalWrite(latchPin, HIGH);
     delay(500);
   }
-
 }
 
 
